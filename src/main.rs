@@ -2,9 +2,9 @@ pub mod hello {
     tonic::include_proto!("hello");
 }
 
-use hello::{HelloRequest, HelloReply};
 use hello::greeter_server::{Greeter, GreeterServer};
-use tonic::{transport::Server, Request, Response, Status};
+use hello::{HelloReply, HelloRequest};
+use tonic::{Request, Response, Status, transport::Server};
 
 #[derive(Default)]
 pub struct MyGreeter {}
